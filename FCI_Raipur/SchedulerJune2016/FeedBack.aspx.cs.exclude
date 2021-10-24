@@ -1,0 +1,115 @@
+﻿/* =============================================================================================================
+ * Project:CMAT
+ * Module : Entry College AND Create College Capacity
+ * Developed By : Bipin Ojha
+ * Created Date: 10 Aug 2012
+ * 
+ * =========================================================================================================*/
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using AICTE.Class;
+using Property_Layer;
+using Business_Layer;
+using Data_Layer;
+using System.Text.RegularExpressions;
+using System.Text;
+using System.IO;
+using System.Web.Mail;
+using MSCaptcha;
+using System.Security.Cryptography;
+using CaptchaDotNet2.Security.Cryptography;
+using System.Globalization;
+using System.Threading;
+using System.Net;
+using CollegeEntry;
+
+public partial class SchedulerSep2014_FeedBack : System.Web.UI.Page
+{
+    CommonPerception MySql = new CommonPerception();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        Int32 _intcount = MySql.SingleCellResult("Select count(*) from dbo.Tb_CentreFeedback where CentreCode='" + Session["CentreCode"].ToString() + "' ");
+        if (_intcount > 0)
+        {
+            MultiView1.ActiveViewIndex = 2;
+            lbmsg.Text = " Your record has been submitted earlier.";
+        }
+        else
+        {
+            MultiView1.ActiveViewIndex = 0;
+        }
+
+        if (!IsPostBack)
+        {
+            FillSchedule();
+        }     
+    }
+
+    #region Message
+
+    public void messageBox(string msg)
+    {
+        Label dd = new Label();
+        dd.Text = "<script language='javascript'>" + Environment.NewLine + "window.alert('" + msg + "');</script>";
+        Page.Controls.Add(dd);
+    }
+
+    #endregion
+
+    protected void btnProceed_Click(object sender, EventArgs e)
+    {
+        MultiView1.ActiveViewIndex = 1;  
+        
+        //Response.Write("hello");
+    }
+
+    protected void Reset_Click(object sender, EventArgs e)
+    {
+        MultiView1.ActiveViewIndex = 0;
+    }
+
+    #region Fill TestSchedule
+
+    void FillSchedule()
+    {
+        txtday11.Text = "NA"; txtday12.Text = "NA"; txtday21.Text = "NA"; txtday22.Text = "NA"; txtday31.Text = "NA"; txtday32.Text = "NA"; txtday41.Text = "NA"; txtday42.Text = "NA"; txtday51.Text = "NA"; txtday52.Text = "NA";
+        txtroom11.Text = "NA"; txtroom12.Text = "NA"; txtroom21.Text = "NA"; txtroom22.Text = "NA"; txtroom31.Text = "NA"; txtroom32.Text = "NA"; txtroom41.Text = "NA"; txtroom42.Text = "NA"; txtroom51.Text = "NA"; txtroom52.Text = "NA";
+    
+    }
+
+    #endregion
+
+    protected void Submit_Click(object sender, EventArgs e)
+    {
+        //'" +  Session["CentreCode"].ToString() + "'
+        string Dateofvisit = ddlDay.SelectedItem.Text.ToString() + "-" + ddlMonth.SelectedItem.Text.ToString() + "-" + ddlYear.SelectedItem.Text.ToString();
+        string Dtofvisit = Convert.ToDateTime(Dateofvisit).ToString("dd-MMM-yyyy");
+
+        bool Result;
+        string InsQuery = "Insert into dbo.Tb_CentreFeedback (DateofVisit,TimeofVisit,CentreCode,Centre,CentreSp,AptechSp,AICTESP,Testdate1,Testcount1,RoomCount1,Testcount2,RoomCount2,Testdate2,Testcount3,RoomCount3,Testcount4,RoomCount4,Testdate3,Testcount5,RoomCount5,Testcount6,RoomCount6,Testdate4,Testcount7,RoomCount7,Testcount8,RoomCount8,Testdate5,Testcount9,RoomCount9,Testcount10,RoomCount10,item1,item2,item3,item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23,item24,item25,item26,item27,item28,item29,item30,item31,item32,item33,item34,item35,item36,item37,item38,item39,item40,improvement,status) values('" + Dtofvisit + "','" + txtTimeofvisit.Text.ToString() + " " + ddlMeridian.SelectedItem.Text.ToString() + "','" +  Session["CentreCode"].ToString() + "','" + txtCentre.Text.ToString() + "','" + txtCentreSP.Text.ToString() + "','" + txtAptechSp.Text.ToString() + "','" + txtAicteSP.Text.ToString() + "','25 Sep 2014','" + txtday11.Text.ToString() + "','" + txtroom11.Text.ToString() + "','" + txtday12.Text.ToString() + "','" + txtroom12.Text.ToString() + "','26 Sep 2014','" + txtday21.Text.ToString() + "','" + txtroom21.Text.ToString() + "','" + txtday22.Text.ToString() + "','" + txtroom22.Text.ToString() + "','27 Sep 2014','" + txtday31.Text.ToString() + "','" + txtroom31.Text.ToString() + "','" + txtday32.Text.ToString() + "','" + txtroom32.Text.ToString() + "','28 Sep 2014','" + txtday41.Text.ToString() + "','" + txtroom41.Text.ToString() + "','" + txtday42.Text.ToString() + "','" + txtroom42.Text.ToString() + "','29 Sep 2014','" + txtday51.Text.ToString() + "','" + txtroom51.Text.ToString() + "','" + txtday52.Text.ToString() + "','" + txtroom52.Text.ToString() + "','" + ddlitem1.SelectedItem.Text.ToString() + "','" + ddlitem2.SelectedItem.Text.ToString() + "','" + ddlitem3.SelectedItem.Text.ToString() + "','" + ddlitem4.SelectedItem.Text.ToString() + "','" + ddlitem5.SelectedItem.Text.ToString() + "','" + ddlitem6.SelectedItem.Text.ToString() + "','" + ddlitem7.SelectedItem.Text.ToString() + "','" + ddlitem8.SelectedItem.Text.ToString() + "','" + ddlitem9.SelectedItem.Text.ToString() + "','" + ddlitem10.SelectedItem.Text.ToString() + "','" + ddlitem11.SelectedItem.Text.ToString() + "','" + ddlitem12.SelectedItem.Text.ToString() + "','" + ddlitem13.SelectedItem.Text.ToString() + "','" + ddlitem14.SelectedItem.Text.ToString() + "','" + ddlitem15.SelectedItem.Text.ToString() + "','" + ddlitem16.SelectedItem.Text.ToString() + "','" + ddlitem17.SelectedItem.Text.ToString() + "','" + ddlitem18.SelectedItem.Text.ToString() + "','" + ddlitem19.SelectedItem.Text.ToString() + "','" + ddlitem20.SelectedItem.Text.ToString() + "','" + ddlitem21.SelectedItem.Text.ToString() + "','" + ddlitem22.SelectedItem.Text.ToString() + "','" + ddlitem23.SelectedItem.Text.ToString() + "','" + ddlitem24.SelectedItem.Text.ToString() + "','" + ddlitem25.SelectedItem.Text.ToString() + "','" + ddlitem26.SelectedItem.Text.ToString() + "','" + ddlitem27.SelectedItem.Text.ToString() + "','" + ddlitem28.SelectedItem.Text.ToString() + "','" + ddlitem29.SelectedItem.Text.ToString() + "','" + ddlitem30.SelectedItem.Text.ToString() + "','" + ddlitem31.SelectedItem.Text.ToString() + "','" + ddlitem32.SelectedItem.Text.ToString() + "','" + ddlitem33.SelectedItem.Text.ToString() + "','" + ddlitem34.SelectedItem.Text.ToString() + "','" + ddlitem35.SelectedItem.Text.ToString() + "','" + ddlitem36.SelectedItem.Text.ToString() + "','" + ddlitem37.SelectedItem.Text.ToString() + "','" + ddlitem38.SelectedItem.Text.ToString() + "','" + ddlitem39.SelectedItem.Text.ToString() + "','" + ddlitem40.SelectedItem.Text.ToString() + "','" + txtimprovement.Text.ToString() + "','A')";
+        Result=MySql.ExecuteNonQuery(InsQuery);
+        if (Result == true)
+        {
+            MultiView1.ActiveViewIndex = 2;
+            lbmsg.Text = " Record inserted Successfully.";
+        }
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("GenerateRoaster.aspx");
+    }
+    //protected void Button1_Click(object sender, EventArgs e)
+    //{
+    //    Response.Redirect("FeedbackPRINT.aspx");
+    //}
+}

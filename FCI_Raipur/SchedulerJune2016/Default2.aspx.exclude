@@ -1,0 +1,5 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SchedulerSep2014/Schedule.master" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="SchedulerSep2014_Default2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    </asp:Content>
+

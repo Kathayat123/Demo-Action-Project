@@ -1,0 +1,87 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Services;
+
+using System.Web.Services.Protocols;
+using System.ComponentModel;
+
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Collections.Specialized;
+
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Web.Mail;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Globalization;
+using System.Diagnostics;
+using System.Web.Resources;
+using System.Web.Handlers;
+using AICTE.Class;
+using System.Web.Script.Services;
+/// <summary>
+/// Summary description for WebService
+/// </summary>
+/// 
+[System.Web.Script.Services.ScriptService()]
+[WebService(Namespace = "http://tempuri.org/")]
+[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+//[System.Web.Services.WebMethod]
+//[System.Web.Script.Services.ScriptMethod]
+// To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+// [System.Web.Script.Services.ScriptService]
+[ToolboxItem(false)]
+
+
+public class WebService : System.Web.Services.WebService {
+
+    CommonPerception Mysql = new CommonPerception();
+
+    public WebService () {
+
+        //Uncomment the following line if using designed components 
+        //InitializeComponent(); 
+    }
+
+    //[WebMethod]
+    //public string GetCompleteList(string Name) 
+    //{
+    //    DataSet ds = new DataSet();
+    //    string Query = "Select CandidateName from dbo.tbCANRegistration WHERE CandidateName LIKE '%'" + Name + "'%'";
+    //    ds = Mysql.GetDataSet(Query);
+    //    return ds.Tables[0].Rows[0]["CandidateName"].ToString();
+    //}
+
+    [WebMethod()]
+    public string[] AutoSuggest(string prefixText, int count, string contextKey)
+    {
+        DataTable dtTable = new DataTable();
+        List<string> Items = new List<string>();
+               
+        object responseDTO = new object();
+        DataSet ds = new DataSet();
+        responseDTO = "Select registrationid,CandidateName,Convert(varchar(50),DateOfBirth,103) from dbo.tbCANRegistration WHERE CandidateName LIKE '%'" + prefixText + "'%'";
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            for (int i = 0; i < ds.Tables[0].Rows.Count;i++ )
+            {
+                Items.Add(AjaxControlToolkit.AutoCompleteExtender.CreateAutoCompleteItem(ds.Tables[0].Rows[i]["CandidateName"]).ToString() + " - DOB - " + ds.Tables[0].Rows[i]["DateOfBirth"].ToString(), ds.Tables[0].Rows[i]["registrationid"].ToString());
+            }
+        }
+        else
+        {
+            responseDTO = null;
+        }
+        return Items.ToArray();
+    }
+    
+}

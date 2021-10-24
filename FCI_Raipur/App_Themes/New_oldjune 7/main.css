@@ -1,0 +1,264 @@
+
+
+body{
+margin:0px;
+padding:0px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+#wrapper{
+width:989px;
+background-color:white;
+margin:auto;
+}
+
+
+#content1{
+margin:0px 37px 37px 37px;
+float:left;
+width:505px;
+}
+
+#content1 h1{
+font-size:24px;
+color:#9f6300;
+margin-top:20px;
+font-weight:normal;
+}
+
+
+#content{
+margin:0px 0px 37px 20px;
+float:left;
+width:505px;
+position:relative;
+}
+
+#content h1{
+font-size:22px;
+color:#9D6005;
+
+margin-top:20px;
+font-weight:normal;
+}
+
+
+#menu{
+padding:2px 5px 2px 10px;
+font-size:14px;
+font-weight:bold;
+background-color:#fea000;
+}
+
+
+#content #casestudieslinks{
+float:right;
+position:absolute;
+top:30px;
+right:5px;
+padding-top:0px 0px 0px 0px;
+}
+
+#content #casestudieslinks ul{
+padding:0px;
+height:100%;
+margin:0px;
+}
+#content #casestudieslinks li img{
+border:none;
+padding:3px 5px 0px 5px;
+}
+
+#content #casestudieslinks li{
+padding:0px;
+list-style:none;
+display:block;
+float:left;
+margin:0px;
+
+}
+
+#content #casestudieslinks li .casestudiesnumbers a{
+margin:3px 5px 3px 5px;
+display:block;
+text-decoration:none;
+font-size:10px;
+padding:0px 5px 0px 5px;
+}
+
+#content #casestudieslinks  .casestudiesnumbers a:visited{
+color:#0000FF;
+}
+
+#content #casestudieslinks  .casestudiesnumbers a:hover{
+background-color:#eeeeee;
+
+}
+
+#content #casestudieslinks  .casestudiesnumbersselected {
+padding:0px 5px 0px 5px;
+display:block;
+text-decoration:none;
+font-size:10px;
+margin:3px 5px 3px 5px;
+background-color:#eeeeee;
+
+}
+
+#content .automobiles .dt {
+float:left;
+font-weight:bold;
+width:100px;
+
+text-align:right;
+}
+
+#content .automobiles .dd {
+
+padding-left:120px;
+padding-bottom:20px;
+}
+#content  .automobiles{
+padding:0px 0px 0px 0px;
+float:left;
+background-image:url(../images/casestudies_bg.gif);
+background-repeat:repeat-x;
+padding:8px 0px 0px 5px;
+margin-bottom:0px;
+margin-bottom:20px;
+}
+
+#content .automobiles p{
+padding:5px 10px 0px 200px;
+line-height:20px;
+color:#666666;
+font-size:18px;
+}
+
+#content .automobiles .link{
+font-size:12px;
+text-align:right;
+font-style:italic;
+color:#333333;
+font-weight:bold;
+}
+
+#content .automobiles .linkblue{
+font-size:11px;
+padding:0px;
+text-align:right;
+color:#333333;
+}
+
+#content .automobiles img{
+padding:5px 10px 0px 10px;
+line-height:20px;
+color:#999999;
+float:left;
+font-size:20px;
+}
+
+
+#content .automobiles h6{
+margin:0px;
+padding:5px;
+font-size:16px;
+margin-bottom:10px;
+}
+
+
+#content li{
+list-style-image:url(../images/bullet_orang.gif);
+padding:0px 0px 10px 0px;
+line-height:18px;
+}
+
+#content li li{
+list-style-image:url(../images/bullet.gif);
+padding:0px 0px 10px 0px;
+line-height:18px;
+}
+
+#content ul ul{ padding-top:0px;}
+#content ul{
+padding:8px 0px 0px 20px;
+margin:0px;
+}
+#content .casestudies{
+padding:0px 0px 0px 0px;
+float:left;
+background-image:url(../images/casestudies_bg.gif);
+background-repeat:repeat-x;
+padding:8px 0px 0px 5px;
+margin-bottom:0px;
+margin-bottom:20px;
+}
+
+#content .casestudies p{
+padding:5px 10px 0px 230px;
+line-height:20px;
+}
+
+#content .casestudies h6{
+margin:0px;
+padding:0px;
+font-size:12px;
+margin-bottom:10px;
+}
+
+
+#content1  a, #content  a:visited { text-decoration:none;
+}
+
+
+
+.link {
+font-size:12px;
+text-align:right;
+color:#003ef1;
+font-weight:normal;
+}
+
+.bluelink {
+font-size:12px;
+color:#003ef1;
+}
+
+.linkform {
+font-size:12px;
+text-decoration:none;
+color:#003ef1;
+}
+.error{
+font-size:11px;
+color:red;}
+
+.link a:link, .link a:visited, .link a:hover {
+
+color:#003ef1;
+
+}
+
+.star{
+color:red;}
+
+
+
+
+.clear{
+clear:both;
+}
+
+
+#content img{
+margin:0px;
+padding:0px;
+}
+.h1{
+font-size:24px;
+color:#9f6300;
+margin-top:10px;
+font-weight:normal;
+}
+

@@ -1,0 +1,191 @@
+
+
+
+
+.qmmc .qmdivider{display:block;font-size:1px;border-width:0px;border-style:solid;position:relative;z-index:1;}
+.qmmc .qmdividery{float:left;width:0px;}
+.qmmc .qmtitle{display:block;cursor:default;white-space:nowrap;position:relative;z-index:1;}
+.qmclear {font-size:1px;height:0px;width:0px;clear:left;line-height:0px;display:block;float:none !important;}
+.qmmc {position:relative;zoom:1;z-index:10;}
+.qmmc a, .qmmc li {float:left;display:block;white-space:nowrap;position:relative;z-index:1;}
+.qmmc div a, .qmmc ul a, .qmmc ul li {float:none;}
+.qmsh div a {float:left;}
+.qmmc div{visibility:hidden;position:absolute;}
+.qmmc .qmcbox{cursor:default;display:block;position:relative;z-index:1;}
+.qmmc .qmcbox a{display:inline;}
+.qmmc .qmcbox div{float:none;position:static;visibility:inherit;left:auto;}
+.qmmc li {z-index:auto;}.qmmc ul {left:-10000px;position:absolute;z-index:10;}
+.qmmc, .qmmc ul {list-style:none;padding:0px;margin:0px;}.qmmc li a {float:none}
+.qmmc li:hover>ul{left:auto;}#qm0 ul {top:100%;}#qm0 ul li:hover>ul{top:0px;left:100%;}
+
+
+
+
+	#qm0 a	
+	{	
+		padding:5px 20px 8px 20px;
+		color:#ffffff;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		font-weight:bold;
+		word-spacing:1px;
+		font-size:14px;
+		text-decoration:none;
+		
+	}
+
+
+	/*"""""""" (MAIN) Hover State""""""""*/	
+	#qm0 a:hover	
+	{	
+		text-decoration:none;
+		color:#9f6300;
+	
+		background-color:#ffffff;
+		
+	}
+
+
+	/*"""""""" (MAIN) Hover State - (duplicated for pure CSS)""""""""*/	
+	
+	
+	
+	#qm0 li:hover>a	
+	{	
+		text-decoration:none;
+	}
+
+
+	/*"""""""" (MAIN) Active State""""""""*/	
+	
+	body #qm0 .active{	
+		background-color:#ffffff;
+		color:#9f6300;
+		
+		
+		text-decoration:none;
+		
+	}
+	
+	body #qm0 .qmactive, body #qm0 .qmactive:hover	
+	{	
+		background-color:#ffffff;
+		color:#9f6300;
+		
+		border-color:#f8b64e;
+		
+		text-decoration:none;
+		
+	}
+
+
+	/*"""""""" (SUB) Container""""""""*/	
+	#qm0 div	
+	{	
+		padding:0px;
+		margin:0px 0px 0px 0px;
+		background-color:#ffffff;
+		display:block;
+		border:#f8b64e solid 1px;
+	}
+ #qm0 ul	
+	{	
+		padding:0px;
+		margin:0px 0px 0px 0px;
+		display:block;
+		border:#f8b64e solid 1px;
+	}
+
+	/*"""""""" (SUB) Items""""""""*/	
+	#qm0 div a, #qm0 ul a	
+	{	
+		padding:8px;
+		margin:0px 0px 2px 0px;
+		background-color:transparent;
+		color:#003ef1;
+		padding-right:40px;
+		display:block;
+		font-weight:normal;
+		font-size:12px;
+		border-width:0px;
+		border-style:none;
+	}
+
+
+	/*"""""""" (SUB) Hover State""""""""*/	
+	#qm0 div a:hover	
+	{	
+		background-color:#fee8b9;
+		color:#9f6300;
+	}
+
+
+	/*"""""""" (SUB) Hover State - (duplicated for pure CSS)""""""""*/	
+	#qm0 ul li:hover>a	
+	{	
+		background-color:#DEB226;
+		color:#FFFFFF;
+	}
+
+
+	/*"""""""" (SUB) Parent Items""""""""*/	
+	#qm0 div .qmparent, #qm0 ul .qmparent	
+	{	
+		text-decoration:none;
+	}
+
+
+	/*"""""""" (SUB) Active State""""""""*/	
+	body #qm0 div .qmactive, body #qm0 div .qmactive:hover	
+	{	
+		color:#393A3A;
+	}
+
+
+	/*"""""""" Individual Titles""""""""*/	
+	#qm0 .qmtitle	
+	{	
+		font-size:12px;
+	}
+
+
+	/*"""""""" Individual Horizontal Dividers""""""""*/	
+	#qm0 .qmdividerx	
+	{	
+		border-top-width:1px;
+		padding-bottom:2px;
+		border-style:solid;
+		border-color:#f8b64e;
+	}
+
+
+	/*"""""""" Individual Vertical Dividers""""""""*/	
+	#qm0 .qmdividery	
+	{	
+		height:20px;
+		
+		width:1px;
+		padding:0px;
+		margin:5px 2px 0px 2px;
+		background-color:#ffffff
+		
+	}
+
+
+	/*"""""""" Content Box Links [hover]""""""""*/	
+	#qm0 .qmcbox a:hover	
+	{	
+		text-decoration:none;
+	}
+
+
+	/*"""""""" Custom Rule""""""""*/	
+	ul#qm0 ul	
+	{	
+		width:3px;
+		padding:5px;
+		background-color:#F2CFCD;
+		border-width:1px;
+		border-style:solid;
+		border-color:#4F5050;
+	}
+

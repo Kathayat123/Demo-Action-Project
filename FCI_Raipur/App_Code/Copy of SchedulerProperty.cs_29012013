@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+/// <summary>
+/// Summary description for SchedulerProperty
+/// </summary>
+namespace CollegeEntry
+{
+   public class CrateCollegeEntry
+    {
+        private string StrCollegName;
+        public string  CollegName
+        {
+            get { return StrCollegName; }
+            set { StrCollegName = value; }
+        }
+
+        private string StrAddress;
+        public string Address
+        {
+            get { return StrAddress; }
+            set { StrAddress = value; }
+        }
+
+        private int StrState;
+        public int State
+        {
+            get { return StrState; }
+            set { StrState = value; }
+        }
+
+        private int StrCity;
+        public int City { get { return StrCity; } set { StrCity = value; } }
+
+        private int StrPincode;
+        public int Pincode { get { return StrPincode; } set { StrPincode = value; } }
+
+        private string StrRegion;
+        public string Region { get { return StrRegion; } set { StrRegion = value; } }
+
+        private string StrCperson;
+        public string Cperson { get { return StrCperson; } set { StrCperson = value; } }
+
+        private string StrContactpersonNo;
+        public string ContactpersonNo { get { return StrContactpersonNo; } set { StrContactpersonNo = value; } }
+
+        private string StrMobileNo;
+        public string MobileNo { get { return StrMobileNo; } set { StrMobileNo = value; } }
+
+        private string StrCenterCode;
+        public string CenterCode { get { return StrCenterCode; } set { StrCenterCode = value; } }
+
+        private int StrNoofMachines;
+        public int NoofMachines { get { return StrNoofMachines; } set { StrNoofMachines = value; } }
+
+        private int StrCenterId;
+        public int CenterId { get { return StrCenterId; } set { StrCenterId = value; } }
+
+
+    }
+
+}

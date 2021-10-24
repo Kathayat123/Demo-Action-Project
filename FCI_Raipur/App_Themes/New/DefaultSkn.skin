@@ -1,0 +1,97 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:GridView SkinId="gridViewSkin"  
+      GridLines="Both" BorderColor="#43622" CellPadding="4" CellSpacing="0" width="100%" border="1"       
+      ForeColor="#400000"  Font-Size="8pt"   Font-Names="Verdana" runat="server" >     
+      <HeaderStyle BackColor="#E8740E" BorderColor="#400000" Wrap="false" ForeColor="White" Font-Bold="True" Font-Size="8pt" height="20px" />
+      <RowStyle BackColor="#FFFFFF" height="18px" />
+      <PagerStyle BackColor="#FFFFFF" HorizontalAlign="center" height="18px" ForeColor="Black" Font-Bold="True"/>      
+      <AlternatingRowStyle BackColor="#FFFFFF" />
+      <SelectedRowStyle  BackColor="#CCCCCC" />
+</asp:GridView>
+
+
+<asp:DropDownList SkinID="drpSkin1" CssClass="inp01" runat="server"></asp:DropDownList>
+<asp:DropDownList SkinID="drpSkin2" CssClass="inp02" runat="server"></asp:DropDownList>
+<asp:DropDownList SkinID="drpSkin3" CssClass="ninput00" runat="server"></asp:DropDownList>
+<asp:Button SkinID="btnSkin" CssClass="inp02" runat="server" />
+<asp:Button SkinID="btnSkin1" CssClass="inp01" runat="server" />
+<asp:Button SkinID="btnSkin2" CssClass="ninput01" runat="server" />
+<asp:TextBox SkinID="txtSkin1" CssClass="inp01" runat="server"></asp:TextBox>
+<asp:TextBox SkinID="txtSkin2" CssClass="inp02" runat="server"></asp:TextBox>
+<asp:TextBox SkinID="txtSkin3" CssClass="ninput00" runat="server"></asp:TextBox>
+<asp:FileUpload SkinID="flProp" CssClass="inp12" runat="server" />
+<asp:imagebutton SkinID="imgSkin1" ImageAlign="AbsMiddle" Runat="server" BorderStyle="Outset" BorderWidth="2px" BackColor="Transparent"></asp:imagebutton>
+<asp:imagebutton SkinID="imgSkin2" ImageAlign="AbsMiddle" Runat="server" BorderStyle="None" BorderWidth="0" BackColor="Transparent"></asp:imagebutton>
+<asp:DataGrid CssClass="bo00" SkinID="dgSkin" BackColor="#CECECE" CellSpacing="1" CellPadding="4" Width="100%" runat="server" BorderStyle="none" BorderWidth="0">
+    <PagerStyle VerticalAlign="Top" CssClass="clsDGPager" HorizontalAlign="left" Position="bottom" Mode="NumericPages" PageButtonCount="6"></PagerStyle>
+    <ItemStyle VerticalAlign="Top" ForeColor="black" BackColor="white" CssClass="a00" Font-Underline="false" HorizontalAlign="Justify" />
+    <HeaderStyle ForeColor="black" VerticalAlign="middle" BackColor="#F5F5F5" Height="22" CssClass="a01" HorizontalAlign="Justify" Wrap="false" />
+</asp:DataGrid>
+<asp:DataGrid runat="server" SkinID="dgSkin1" CssClass="bo07" BackColor="#ffffff" CellSpacing="1" CellPadding="3">
+    <PagerStyle VerticalAlign="Top" CssClass="bo03"  HorizontalAlign="Right" BackColor="#999999" Position="bottom" Mode="NumericPages" PageButtonCount="6"></PagerStyle>
+    <HeaderStyle Wrap="false" ForeColor="#ffffff" VerticalAlign="middle" BackColor="#999999" CssClass="bo09" HorizontalAlign="Justify" />
+    <ItemStyle Wrap="false" VerticalAlign="middle" ForeColor="black" BackColor="#fffff0" CssClass="bo07" Font-Underline="false" HorizontalAlign="Justify" />
+</asp:DataGrid>
+<asp:DataGrid runat="server" SkinID="dgSkin2" CssClass="bo03" BackColor="#CECECE" CellSpacing="0" CellPadding="0" BorderStyle="solid" BorderWidth="0">
+    <ItemStyle Wrap="false" VerticalAlign="top" ForeColor="black" BackColor="#B1CBD9" CssClass="bo07" Font-Underline="false" HorizontalAlign="Justify" />
+    <HeaderStyle CssClass="bo05" Font-Bold="true" Wrap="false" ForeColor="White" VerticalAlign="middle" BackColor="#004b1c" HorizontalAlign="Left" />
+</asp:DataGrid>
+<asp:DataGrid CssClass="bo01" SkinID="dgSkin3" BackColor="#FFFFFF" CellSpacing="1" CellPadding="4" runat="server" BorderStyle="groove" BorderWidth="1">
+    <PagerStyle VerticalAlign="Top" HorizontalAlign="left" Position="bottom" Mode="NumericPages" PageButtonCount="6"></PagerStyle>
+    <ItemStyle Wrap="false" VerticalAlign="middle" ForeColor="black" Font-Underline="false" HorizontalAlign="Justify" />
+    <HeaderStyle Font-Bold="true" Wrap="false" ForeColor="black" VerticalAlign="middle" BackColor="#EEEEEE" HorizontalAlign="Justify" />
+</asp:DataGrid>
+<asp:DataGrid runat="server" SkinID="dgSkin4" CssClass="bo07" BackColor="#ffffff" CellSpacing="0" CellPadding="3" BorderColor="#6899B6" BorderStyle="solid" BorderWidth="1">
+    <HeaderStyle ForeColor="#ffffff" Font-Bold="true" Wrap="false" VerticalAlign="middle" CssClass="nbo05" Height="26px" HorizontalAlign="Justify" />
+    <ItemStyle Wrap="false" VerticalAlign="top" ForeColor="black" BackColor="#B1CBD9" CssClass="bo07" Font-Underline="false" HorizontalAlign="Justify" />
+</asp:DataGrid>
+<asp:DataGrid runat="server" SkinID="dgSkin6" CssClass="bo07" BackColor="#fcfcfc" CellSpacing="1" CellPadding="3" BorderColor="#fcfcfc" BorderStyle="solid" BorderWidth="0">
+    <PagerStyle VerticalAlign="Top" CssClass="bo03"  HorizontalAlign="Right" BackColor="#fcfcfc" Position="bottom" Mode="NumericPages" PageButtonCount="6"></PagerStyle>
+    <HeaderStyle Wrap="false" VerticalAlign="middle" BackColor="#e8740e" CssClass="bo08" HorizontalAlign="center" />
+    <ItemStyle Wrap="false" VerticalAlign="top" ForeColor="black" BackColor="#fcfcfc" CssClass="bo05" Font-Underline="false" HorizontalAlign="Justify" />
+</asp:DataGrid>
+<asp:DataGrid runat="server" SkinID="dgSkin8" CssClass="bo07" BackColor="#999999" CellSpacing="1" CellPadding="3" BorderColor="#999999" BorderStyle="solid" BorderWidth="0">
+    <HeaderStyle Font-Bold="true" Wrap="false" VerticalAlign="middle" BackColor="#CCCCCC" CssClass="bo07" HorizontalAlign="center" />
+    <ItemStyle Wrap="false" VerticalAlign="top" ForeColor="black" BackColor="#fcfcfc" CssClass="bo06" Font-Underline="false" HorizontalAlign="Justify" />
+</asp:DataGrid>
+<asp:DataGrid runat="server" SkinID="dgSkin7" CssClass="bo07" BackColor="#ffffff" CellSpacing="0" CellPadding="3" BorderColor="#6899B6" BorderStyle="solid" BorderWidth="1">
+    <HeaderStyle Wrap="false" VerticalAlign="middle" CssClass="a013" Height="26px" HorizontalAlign="Center" Font-Bold="true" />
+    <ItemStyle Wrap="false" VerticalAlign="top" ForeColor="black" BackColor="#B1CBD9" CssClass="bo07" Font-Underline="false" HorizontalAlign="Justify" />
+</asp:DataGrid>
+<asp:DataGrid SkinID="dgSkin9" BackColor="#BBBBBB" CssClass="bo07" CellSpacing="1" CellPadding="4" Width="100%" BorderStyle="None" BorderWidth="0px" GridLines="None" Runat="server">
+    <ItemStyle VerticalAlign="middle" BackColor="#FFFFFF" CssClass="bo07" Font-Underline="false" HorizontalAlign="Justify" />
+    <HeaderStyle VerticalAlign="middle" BackColor="#e8740e" CssClass="bo04" HorizontalAlign="Justify" Wrap="false" ForeColor="White" />
+</asp:DataGrid>
+<asp:CheckBoxList SkinID="chklSkin1" Runat="server" CssClass="bo07" BorderStyle="None" BackColor="#ffffff"></asp:CheckBoxList>
+<asp:CheckBox SkinID="chkSkin" Height="12" runat="server" />
+<asp:ListBox SkinID="lstskin" runat="server" CssClass="bo07" />
+
+<asp:FileUpload SkinID="flPhoto" CssClass="inp01" runat="server"  />
+
+
+<asp:Calendar Width="210" BorderColor="#ffffff" DayStyle-Font-Underline="false" CssClass="clndr" 
+    CellPadding="2" cellspacing="1" BackColor="#DADAA7" ShowNextPrevMonth="false"
+    WeekendDayStyle-ForeColor="Red" SkinID="clndrSkn1" runat="server" ShowTitle="false"
+    OtherMonthDayStyle-ForeColor="White" OtherMonthDayStyle-Font-Size="1pt" 
+    UseAccessibleHeader="false" FirstDayOfWeek="Monday">
+    <DayHeaderStyle Font-Bold="true" BackColor="#004B1C" ForeColor="#DADAA7" VerticalAlign="Middle" HorizontalAlign="Center" />
+    <SelectedDayStyle Font-Bold="true" BackColor="#004B1C" ForeColor="#DADAA7" />
+    <TitleStyle BackColor="#ffffff" ForeColor="#004B1C" HorizontalAlign="left" Font-Bold="true" VerticalAlign="Middle" />
+    <WeekendDayStyle BackColor="#E5E5CD" />
+    <DayStyle Font-Underline="false" BackColor="#ffffff" />
+</asp:Calendar>
+

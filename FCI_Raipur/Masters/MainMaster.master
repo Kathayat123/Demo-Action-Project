@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeFile="MainMaster.master.cs" Inherits="MainMaster"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="../Css/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="../css/style.css" type="text/css" rel="stylesheet" />
+<title></title>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script src="../js/jquery-1.11.1.min.js" type="text/javascript"></script>
+   
+</head>
+<body style="margin:0; font-family:Arial; font-size:12px;background:#D2D2D2; " >
+    <form id="form1" runat ="server"  >
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    <div class="topdiv">
+  <div class="container text-right">
+   <div class="dateTime"><img src="../img/icon-date.jpg" alt="" /> <span id="dateTime"></span> | <span id="timer"></span> IST   
+        <%--<a href="http://www.aicte-india.org/" target="_blank" style="color: #FFFFFF">Contact us</a>--%></div>
+  </div>
+  </div>
+
+<div class="wrapper" >
+<img src="../Images/header.jpg" class="img-responsive" alt="" width="100%" style="height:175px"/>
+</div>
+
+ 
+  <div class="container white_bg" style="background:#D2D2D2">
+  <div style="height: 15px;"> </div>
+  <div class="col-md-3  col-sm-4 col-xs-12"   >
+    <div class="list-group">
+    <%--  <img src="../Images/44_new.PNG" />--%>
+       </div>
+
+  </div>
+      
+    <div class="col-md-9 col-sm-12 col-xs-12">
+         <div class="col-md-9 col-sm-12 col-xs-12" style="padding-left:0">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div> 
+         
+  <div class="col-md-3 col-sm-12 col-xs-12">
+      <%--  <img src="../Images/55_new.PNG" />--%>
+ 
+     
+    </div>
+        </div>
+   <div>
+    </div>
+</div>
+<div class="navbar navbar-default navbar-default" style ="border :0" >
+  <div class="container">
+       <marquee direction="left">
+   <div class="col-md-8 col-sm-6 col-xs-12">
+      
+    <p style="color: #BCAA48" >
+                 HELPDESK:      <asp:Image ID="Image1"  runat="server" ImageUrl="~/Images/phone.png" />
+                   Contact No. &nbsp;&nbsp; <asp:Image ID="Image2"  runat="server" ImageUrl="~/Images/mail.png" />
+                    Email id : <a href="mailto:helpdesk.aieaa@gmail.com" style="color: #BCAA48" ></a>  Call centre timing
+             </p>
+         
+   </div>
+             </marquee> 
+   <div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="text-right">
+  
+   </div>
+   </div>
+    </div>
+</div>
+<script type='text/javascript'>
+
+    var dat = Date();
+    var res = dat.split(" ");
+    var fullDate = res[0] + ' ' + res[1] + ' ' + res[2] + ' ' + res[3];
+    document.getElementById("dateTime").innerHTML = fullDate;
+
+    var myVar = setInterval(myTimer, 1000);
+    function myTimer() {
+        var d = new Date();
+        document.getElementById("timer").innerHTML = d.toLocaleTimeString();
+    }
+
+    //<![CDATA[
+    (function () {
+        var quotes = $(".quotes");
+        var quoteIndex = -1;
+
+        function showNextQuote() {
+            ++quoteIndex;
+            quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(200)
+            .delay(4000)
+            .fadeOut(200, showNextQuote);
+        }
+        showNextQuote();
+    })();
+    //]]> 
+
+</script>
+<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    </form>
+</body>
+</html>

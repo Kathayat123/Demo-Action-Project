@@ -1,0 +1,1828 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="FeedbackPRINT.aspx.cs" Inherits="SchedulerFeb2015_FeedbackPRINT" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="default.css" />
+    <script language="Javascript" type="text/javascript">
+        /* ================= ONLY Alphabets=========================================================================== */
+        function ValidateAlpha() {
+            var keyCode = window.event.keyCode;
+            if ((keyCode < 65 || keyCode > 90) && (keyCode < 97 || keyCode > 123) && keyCode != 32) {
+                window.event.returnValue = false;
+                alert("Enter only Aplhabets");
+            }
+        }
+        /* =========================================================================================== */
+        /* Numeric Checking */
+
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                alert("Enter a valid number");
+                return false;
+            }
+
+            return true;
+        }
+        /*======================================================================================== */
+        function Printdoc() {
+            window.print();
+        }
+        /* =========================================================================================== */
+        /* Numeric Checking */
+
+
+        /*======================================================================================== */
+        /*----------------------------------------------------------------------------- */
+    </script>
+    <style type="text/css">
+        .BoxType
+        {
+            font-family: Arial;
+            font-size: 12px;
+            height: 19px;
+            color: Black;
+            letter-spacing: 0.09em;
+            border-color: Olive;
+            border-width: 1px;
+            text-align: center;
+        }
+        
+        .BoxType1
+        {
+            font-family: Arial;
+            font-size: 12px;
+            color: Black;
+            height: 35px;
+            letter-spacing: 0.09em;
+            border-color: Olive;
+            border-width: 1px;
+        }
+        .style2
+        {
+            width: 2%;
+            height: 3px;
+        }
+        .style3
+        {
+            width: 5%;
+            height: 3px;
+        }
+        .style4
+        {
+            height: 3px;
+        }
+        .style5
+        {
+            height: 45px;
+        }
+        .style6
+        {
+            width: 5%;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center" style="width: 99%;">
+            <tr>
+                <td align="center" class="TextBox_ExamHead" colspan="20" valign="middle">
+                    <asp:MultiView ID="MultiView1" runat="server">
+                        <asp:View ID="View1" runat="server">
+                            <table cellpadding="0" cellspacing="0" style="width: 99%; border-style: solid; border-width: 1px;
+                                border-color: Black;">
+                                <tr>
+                                    <td align="center" class="topHeader">
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" class="topHeader" colspan="20">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="topHeader">
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" class="topHeader" colspan="20">
+                                        CMAT 2015-16 (Second Test)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" class="topHeader">
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" class="topHeader" colspan="20">
+                                        Pre-Test Feedback by AICTE Observers
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 2%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 2%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left" class="LeftTd">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" class="LeftTd" colspan="8">
+                                        Date of Visit
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="4">
+                                        <%-- <asp:UpdatePanel runat="server">
+                                <ContentTemplate>--%>
+                                        <%--  </ContentTemplate>
+                                </asp:UpdatePanel>--%>
+                                        <asp:Label ID="ddlitem41" runat="server" Text=""></asp:Label>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8">
+                                        Time of Visit
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="4">
+                                        <asp:Label ID="ddlitem42" runat="server" Text=""></asp:Label>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8">
+                                        Name and Address of Centre
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="10">
+                                        <asp:Label ID="ddlitem43" runat="server" Text=""></asp:Label>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8">
+                                        Name and Designation of the Centre Superintendent
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="10">
+                                        <asp:Label ID="ddlitem44" runat="server" Text=""></asp:Label>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8">
+                                        Name and Designation of the Aptech Supervisor
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="10">
+                                        <asp:Label ID="ddlitem45" runat="server" Text=""></asp:Label>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8">
+                                        Name,Address,EmailId and Contact Phone No. of the AICTE Observer
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="10">
+                                        <asp:Label ID="ddlitem46" runat="server" Text=""></asp:Label>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 15px;">
+                                    <td align="left">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="middle">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="10">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr style="height: 35px;">
+                                    <td align="left" valign="top">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8" valign="top">
+                                        Test Schedule of the Centre
+                                    </td>
+                                    <td align="left" style="width: 2%" valign="top">
+                                        :
+                                    </td>
+                                    <td align="left" colspan="10">
+                                        <table border="1" cellpadding="0" cellspacing="0" style="width: 100%; border-width: 1px;">
+                                            <tr style="height: 25px;">
+                                                <td align="center" rowspan="2" style="font-family: verdana; font-size: 9px">
+                                                    Date
+                                                </td>
+                                                <td align="center" colspan="2" style="font-family: verdana; font-size: 9px">
+                                                    Morning Shift
+                                                </td>
+                                                <td align="center" colspan="2" style="font-family: verdana; font-size: 9px">
+                                                    Evening Shift
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 25px;">
+                                                <td align="left" style="font-family: verdana; font-size: 9px">
+                                                    No. of Students
+                                                </td>
+                                                <td align="left" style="font-family: verdana; font-size: 9px">
+                                                    No.of rooms booked
+                                                </td>
+                                                <td align="left" style="font-family: verdana; font-size: 9px">
+                                                    No. of Students
+                                                </td>
+                                                <td align="left" style="font-family: verdana; font-size: 9px">
+                                                    No. of rooms booked
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 25px;">
+                                                <td align="center">
+                                                    19.02.2015
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c1" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r1" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c11" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r11" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 25px;">
+                                                <td align="center">
+                                                    20.02.2015
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c12" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r12" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c13" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r13" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 25px;">
+                                                <td align="center">
+                                                    21.02.2015
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c14" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r14" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c15" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r15" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 25px;">
+                                                <td align="center">
+                                                    22.02.2015
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c16" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r16" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c17" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r17" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr style="height: 25px;" id="trSchedule" runat="server" visible="false">
+                                                <td align="center">
+                                                    23.02.2015
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c18" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r18" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="c19" runat="server" Text=""></asp:Label>
+                                                </td>
+                                                <td align="center">
+                                                    <asp:Label ID="r19" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" style="height: 35px">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8" style="height: 25px">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 2%; height: 25px;" valign="top">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%; height: 25px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="left" colspan="21" style="height: 25px; border-top-style: solid; border-top-color: black;
+                                        border-top-width: 1px;">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr id="Tr1" runat="server" visible="false">
+                                    <td align="left" class="style4">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="8" class="style4">
+                                    </td>
+                                    <td align="left" valign="top" class="style2">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                    <td align="left" class="style3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" valign="top">
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" colspan="20" valign="top">
+                                        AVAILABILITY OF GENERAL FACILITES<br />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="21">
+                                        <table cellpadding="0" cellspacing="0" style="width: 100%; border-style: solid; border-top-width: 1px;
+                                            border-left-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-color: Black;">
+                                            <tr id="Tr2" runat="server" visible="false">
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 2%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="border-top-style: solid; border-bottom-style: solid; border-top-width: 1px;
+                                                    border-bottom-width: 1px; border-top-color: Black; border-bottom-color: Black;"
+                                                    colspan="2" class="style5">
+                                                    &nbsp; Item No.
+                                                </td>
+                                                <td align="center" colspan="16" style="border: 1px solid Black;" class="style6">
+                                                    Requirement
+                                                </td>
+                                                <td align="center" colspan="3" style="border-width: 1px; border-top-style: solid;
+                                                    border-bottom-style: solid; border-top-color: Black; border-bottom-color: Black;"
+                                                    class="style5">
+                                                    Yes / No &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;"
+                                                    colspan="2" class="style5">
+                                                    1
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether the required number of computers as per test schedule is available in the
+                                                    Examination Hall?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;"
+                                                    class="style5">
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    <asp:Label ID="ddlitem1" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    2
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether Provision of 10% additional Computers has been made to meet redundancy?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem2" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    3
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether primary internet connectivity is available at the test centre
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem3" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    4
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether additional internet connectivity with alternate service provider is available
+                                                    at the test centre
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem4" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    5
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether UPS and Genset are available and working at the centre?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem5" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    6
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether examination halls are properly cleaned?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem6" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    7
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether examination hall had proper arrangements of ventilation through fan or AC.
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem7" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    8
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Weather adequate lighting is available in the testing halls.
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem8" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    9
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether seating of the candidates is comfortable maintaining minimum 2 feet distance
+                                                    between two seats to avoid inconvenience and adequate provisions to avoid interaction
+                                                    between the candidates
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem9" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    10
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether separate clean toilet for male and female is available?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem10" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    11
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether clean drinking water is available at the test centre accessible to test
+                                                    room.
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem11" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    12
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether provision of bell / announcement is available
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem12" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    13
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether provision of required number of verification desk @ one verification counter
+                                                    for verification of 70 candidates is made available?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem13" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    14
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether provision of required number of registration desk @ one registration counter
+                                                    for registering up to 30 candidates is made available?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem14" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    15
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether facility for capturing candidates thumb impression through biometric device
+                                                    and photo through webcam at the registration desk is available
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem15" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    16
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether display boards for displaying seating plan, registration numbers, room numbers,
+                                                    timing of online test, general instructions etc, available at the entry gate?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem16" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    17
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether provision to display details of seating plan outside the test room has been
+                                                    made
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem17" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    18
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether scheduling for two invigilators to be present in the examination hall throughout
+                                                    the examination has been made?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem18" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    19
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether scheduling for one reliever on six invigilators have been made for reliving
+                                                    the invigilators?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem19" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    20
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether sufficient copies of briefing instructions have been made for the candidates?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem20" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    21
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether sufficient copies of undertaking for any malpractice / frauds have been
+                                                    made?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem21" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    22
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether adequate provision of Web cameras / CCTV has been made to cover the recording
+                                                    of entire test room to ensure smooth conduct of online examination?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem22" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    23
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether security arrangements like antivirus software is loaded on test computers
+                                                    of the candidates and antivirus software and firewall is available on the server?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem23" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    24
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether provision of security guards has been made at the Test Centre?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem24" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    25
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether Server is installed at Centre in Secure space?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem25" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    26
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether adequate space that can be used as waiting area for the scheduled candidates
+                                                    is available?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem26" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    27
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether adequate parking space is available for the scheduled candidates?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem27" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="21" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    AVIALABILITY OF HARD WARE AND SOFTWARE COMPUTING FACILITIES
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    28
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Structured network cabling (CAT 5 and above)
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem28" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    29
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Minimum Desktop configuration in Lab (Min P IV 512 MB Ram)
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem29" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    30
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Minimum distance between two desktops (2 ft)
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem30" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    31
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Hard disk space on desktops &gt; 200 MB
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem31" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    32
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Color monitor 15&quot; and above
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem32" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    33
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Whether functioning of the entire PC including mouse, keyboard and monitor are in
+                                                    good condition?
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem33" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    34
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    UPS back-up of at least 15 minutes
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem34" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    35
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Diesel Genset available of minimum capacity available in ratio of 1 KVA/4 PCs (Normal
+                                                    standard is 1 KVA/5 PCs)
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem35" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    36
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Primary Internet connection bandwidth &gt;= 2 MBPS (Name of service provider)
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem36" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    37
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    Secondary internet bandwidth (&gt;=2 MBPS) (Name of different service provider)
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem37" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    38
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    LAN Switch &gt;/= 100 MBPS
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem38" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="21" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    OVERALL OBSERVATIONS
+                                                    <br />
+                                                    (Please tick mark correct option)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    The centre is READY in all respect to conduct the CMAT exam.
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem39" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;" class="style5">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;" class="style5">
+                                                    The centre is NOT READY to conduct the CMAT exam.
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    <asp:Label ID="ddlitem40" runat="server" Text=""></asp:Label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="19" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;">
+                                                    Improvement required with respect to following item numbers:<br />
+                                                    <br />
+                                                    <asp:TextBox ID="txtimprovement" runat="server" Height="120px" TextMode="MultiLine"
+                                                        Width="96%"></asp:TextBox>
+                                                    <br />
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                            <tr runat="server" visible="false">
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr runat="server" visible="false">
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr runat="server" visible="false">
+                                                <td align="center" colspan="2" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="15" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; border-left-style: solid; border-left-width: 1px;
+                                                    border-left-color: #000000; padding-left: 5px;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #000000;
+                                                    border-right-style: solid; border-right-width: 1px; border-right-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" colspan="3" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000;">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right" colspan="21" style="border-bottom-style: solid; border-bottom-width: 1px;
+                                                    border-bottom-color: #000000; padding-right: 40px;">
+                                                    <br />
+                                                    <br />
+                                                    (Signature)<br />
+                                                    &nbsp;Name &amp; Contact number of the AICTE Observers<br />
+                                                    &nbsp;<br />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="center" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" colspan="2">
+                                                    <br />
+                                                    <asp:Button ID="btnProceed" runat="server" CssClass="TextBox" Font-Bold="True" ForeColor="Red"
+                                                        Height="30px" Text="Print" OnClientClick="Printdoc();" Width="70px" />
+                                                    <br />
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 2%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" style="width: 5%">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="width: 5%;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" style="width: 5%;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" colspan="2">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%;">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 2%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                    <td align="left" style="width: 5%">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </asp:View>
+                    </asp:MultiView>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="LeftTd" colspan="8" valign="middle">
+                </td>
+                <td style="width: 2%; height: 3px;" valign="middle">
+                </td>
+                <td colspan="11" valign="middle">
+                </td>
+            </tr>
+            <tr>
+                <td align="right" colspan="8" style="height: 5px">
+                </td>
+                <td style="width: 2%; height: 5px;">
+                </td>
+                <td align="left" colspan="11" style="height: 5px">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="right" colspan="8">
+                    &nbsp;
+                </td>
+                <td style="width: 2%">
+                    &nbsp;
+                </td>
+                <td align="left" colspan="11">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td align="right" colspan="8" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 2%" valign="middle">
+                    &nbsp;
+                </td>
+                <td colspan="11" valign="middle">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 2%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+                <td style="width: 5%" valign="middle">
+                    &nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

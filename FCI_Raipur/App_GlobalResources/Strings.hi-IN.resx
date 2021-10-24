@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add1" xml:space="preserve">
+    <value>पता पंक्ति 1</value>
+  </data>
+  <data name="Add2" xml:space="preserve">
+    <value>पता पंक्ति 2</value>
+  </data>
+  <data name="Add3" xml:space="preserve">
+    <value>पता पंक्ति 3</value>
+  </data>
+  <data name="CasteNo" xml:space="preserve">
+    <value>जाति प्रमाण पत्र संख्या</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>वर्ग</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>शहर</value>
+  </data>
+  <data name="DOB" xml:space="preserve">
+    <value>जन्म की तारीख</value>
+  </data>
+  <data name="dsf" xml:space="preserve">
+    <value>आप विशेष सुविधाएं लाभ उठाने के लिए चाहते हैं</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ईमेल आईडी</value>
+  </data>
+  <data name="Fname" xml:space="preserve">
+    <value>पिता का नाम</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>लिंग</value>
+  </data>
+  <data name="lno" xml:space="preserve">
+    <value>लैंडलाइन नंबर</value>
+  </data>
+  <data name="Mname" xml:space="preserve">
+    <value>माँ का नाम</value>
+  </data>
+  <data name="mobile" xml:space="preserve">
+    <value>मोबाइल नंबर</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>उम्मीदवार का पूरा नाम</value>
+  </data>
+  <data name="nationality" xml:space="preserve">
+    <value>राष्ट्रीयता</value>
+  </data>
+  <data name="nd" xml:space="preserve">
+    <value>विकलांगता की प्रकृति</value>
+  </data>
+  <data name="pc1" xml:space="preserve">
+    <value>पसंदीदा शहर 1</value>
+  </data>
+  <data name="pc2" xml:space="preserve">
+    <value>पसंदीदा शहर 2</value>
+  </data>
+  <data name="pc3" xml:space="preserve">
+    <value>पसंदीदा शहर 3</value>
+  </data>
+  <data name="pd" xml:space="preserve">
+    <value>शारीरिक विकलांगता</value>
+  </data>
+  <data name="ped1" xml:space="preserve">
+    <value>पसंदीदा परीक्षा तिथि 1</value>
+  </data>
+  <data name="ped2" xml:space="preserve">
+    <value>पसंदीदा परीक्षा तिथि 2</value>
+  </data>
+  <data name="ped3" xml:space="preserve">
+    <value>पसंदीदा परीक्षा तिथि 3</value>
+  </data>
+  <data name="pin" xml:space="preserve">
+    <value>पिन कोड</value>
+  </data>
+  <data name="religion" xml:space="preserve">
+    <value>धर्म</value>
+  </data>
+  <data name="state" xml:space="preserve">
+    <value>राज्य / प्रांत</value>
+  </data>
+  <data name="uphoto" xml:space="preserve">
+    <value>अपलोड पासपोर्ट आकार फोटो</value>
+  </data>
+  <data name="usign" xml:space="preserve">
+    <value>अपलोड हस्ताक्षर</value>
+  </data>
+  <data name="IMPDATE" xml:space="preserve">
+    <value>महत्वपूर्ण तिथियाँ</value>
+  </data>
+  <data name="AboutCMAT" xml:space="preserve">
+    <value>सीमेट के संबंध में</value>
+  </data>
+  <data name="AboutCMAT1" xml:space="preserve">
+    <value>&lt;b&gt;संयुक्त प्रबन्धन प्रवेश परीक्षा (सीमेट)&lt;/b&gt; एक राष्ट्रीय स्तर की प्रवेश परीक्षा  है जिसका संचालन मानव संशाधन विकाश  मंत्रालय के निदेशानुशार प्रतिवर्ष अखिल भारतीय तकनिकी शिक्षा परिशद अभातशिप द्वारा  किया जाता है ।&lt;br&gt;सीमेट कम्प्यूटर आधारित तीन (३) घण्टे की ऑनलाइन परीक्षा  है जिसमें विभिन्न क्षेत्रों जैसे परिमाणात्मक तकनीक, तार्किक क्षमता (लॉजिकल,रीजनिंग),भाषा बोध तथा सामान्य ज्ञान में अभ्यर्थी की क्षमता का  मूल्यांकन करने के लिए एक सत्र में संचालित की जाती है। यह  परीक्षा संस्थाओ को सभी प्रबन्ध  कार्यक्रमों  में प्रवेश के लिए उपयुक्त स्नातक अभ्यर्थियों का चुनाव करने में सुविधा प्रदान  करती है। सीमेट स्कोर सभी अनुमोदित  संस्थाओ / विश्वविद्यालय  विभागों /घटक महाविद्यालयों /संबद्धता  प्राप्त  महाविद्यालयो द्वारा मान्य हैं । सीमेट -२०१७, २८  जनवरी को आयोजित  जाएगी। २९ जनवरी २०१७ एक आरक्षित दिन है।</value>
+  </data>
+  <data name="advertisement" xml:space="preserve">
+    <value>विज्ञापन</value>
+  </data>
+  <data name="CandidateIdentificationAffidavit" xml:space="preserve">
+    <value>उम्मीदवार पहचान हलफनामा</value>
+  </data>
+  <data name="CastCertificate" xml:space="preserve">
+    <value>जाति प्रमाण पत्र</value>
+  </data>
+  <data name="CMAT" xml:space="preserve">
+    <value>संयुक्त प्रबन्धन प्रवेश परीक्षा</value>
+  </data>
+  <data name="CMAT1" xml:space="preserve">
+    <value>सीमेट - २०१७</value>
+  </data>
+  <data name="CMATisconductedinvariouscitiesacrossIndia" xml:space="preserve">
+    <value>सीमेट परीक्षा  भारत की विभिन्न भाहरों में जाती है</value>
+  </data>
+  <data name="CMATTrialTest" xml:space="preserve">
+    <value>सीमेट ट्रायल परीक्षा</value>
+  </data>
+  <data name="eligibility" xml:space="preserve">
+    <value>योग्यता</value>
+  </data>
+  <data name="examdate" xml:space="preserve">
+    <value>परीक्षा की तिथि</value>
+  </data>
+  <data name="examdate1" xml:space="preserve">
+    <value>दिनांक : २८  जनवरी,२०१७&lt;br/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;२९ जनवरी ,२०१७(आरक्षित दिन)</value>
+  </data>
+  <data name="Existinguser" xml:space="preserve">
+    <value>डाउनलोड स्कोर कार्ड</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>सामान्य प्रश्न</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>प्रतिक्रिया</value>
+  </data>
+  <data name="Forgotpassword" xml:space="preserve">
+    <value>पासवर्ड भूल गए?</value>
+  </data>
+  <data name="GPAT2016" xml:space="preserve">
+    <value>जीपेट २०१७</value>
+  </data>
+  <data name="GraduatePharmacyAptitudeTest2016" xml:space="preserve">
+    <value>स्नातक भेषजी अभिवृति परीक्षा - २०१७</value>
+  </data>
+  <data name="Helpline" xml:space="preserve">
+    <value>सहायता सम्पर्क</value>
+  </data>
+  <data name="helplineEmail" xml:space="preserve">
+    <value>ईमेल: customercare@aicte-cmat.in</value>
+  </data>
+  <data name="helplinetelephone" xml:space="preserve">
+    <value>टेलीफोन नं .: ०२२-४२०४०२४० / १८८</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>होम</value>
+  </data>
+  <data name="Howtoapply" xml:space="preserve">
+    <value>आवेदन कैसे करें?</value>
+  </data>
+  <data name="Insturctionforfillingform" xml:space="preserve">
+    <value>फार्म भरने के लिए निर्देश</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Newregistraion" xml:space="preserve">
+    <value>विश्वविद्यालयों / संस्थानों के लिए पंजीकरण</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>अधिसूचना</value>
+  </data>
+  <data name="PassResult" xml:space="preserve">
+    <value>उत्तीर्ण प्रतिफल</value>
+  </data>
+  <data name="Paymentprocess" xml:space="preserve">
+    <value>भुगतान प्रक्रिया</value>
+  </data>
+  <data name="PhysicallyDisabledScribeForm" xml:space="preserve">
+    <value>दिव्यांगता प्रपत्र</value>
+  </data>
+  <data name="PressRelease" xml:space="preserve">
+    <value>प्रेस विज्ञप्ति</value>
+  </data>
+  <data name="printofscorecard" xml:space="preserve">
+    <value>स्कोर कार्ड का प्रिंट</value>
+  </data>
+  <data name="printofscorecard1" xml:space="preserve">
+    <value>दिनांक : ९ फरवरी २०१७</value>
+  </data>
+  <data name="Registrationenddate" xml:space="preserve">
+    <value>पंजीकरण की अंतिम तिथि</value>
+  </data>
+  <data name="Registrationenddate1" xml:space="preserve">
+    <value>दिनांक : २५  दिसंबर २०१६</value>
+  </data>
+  <data name="Registrationstartdate" xml:space="preserve">
+    <value>पंजीकरण आरम्भ करने की तिथि</value>
+  </data>
+  <data name="Registrationstartdate1" xml:space="preserve">
+    <value>दिनांक : १० अक्टूबर २०१६</value>
+  </data>
+  <data name="Resultdeclarationdate" xml:space="preserve">
+    <value>परिणाम घोशित करने की तिथि</value>
+  </data>
+  <data name="Resultdeclarationdate1" xml:space="preserve">
+    <value>दिनांक : ८ फरवरी २०१७</value>
+  </data>
+  <data name="sampledocumet" xml:space="preserve">
+    <value>नमूना दस्तावेज</value>
+  </data>
+  <data name="ScribeUndertakingCertificatebyCandidate" xml:space="preserve">
+    <value>उम्मीदवार द्वारा मुंशी उपक्रम प्रमाण पत्र</value>
+  </data>
+  <data name="stategovernment" xml:space="preserve">
+    <value>राज्य सरकार</value>
+  </data>
+  <data name="TestCities" xml:space="preserve">
+    <value>परीक्षा हेतु  शहर</value>
+  </data>
+  <data name="TestPattern" xml:space="preserve">
+    <value>टेस्ट पैटर्न</value>
+  </data>
+  <data name="TrialTest" xml:space="preserve">
+    <value>प्रवेभा परीक्षा</value>
+  </data>
+  <data name="university" xml:space="preserve">
+    <value>विश्वविद्यालय</value>
+  </data>
+</root>

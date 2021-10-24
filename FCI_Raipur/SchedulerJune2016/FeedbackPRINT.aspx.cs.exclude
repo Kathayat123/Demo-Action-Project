@@ -1,0 +1,142 @@
+﻿/* =============================================================================================================
+ * Project:CMAT
+ * Module : Entry College AND Create College Capacity
+ * Developed By : Bipin Ojha
+ * Created Date: 10 Aug 2012
+ * 
+ * =========================================================================================================*/
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using AICTE.Class;
+using Property_Layer;
+using Business_Layer;
+using Data_Layer;
+using System.Text.RegularExpressions;
+using System.Text;
+using System.IO;
+using System.Web.Mail;
+using MSCaptcha;
+using System.Security.Cryptography;
+using CaptchaDotNet2.Security.Cryptography;
+using System.Globalization;
+using System.Threading;
+using System.Net;
+using CollegeEntry;
+
+public partial class SchedulerFeb2015_FeedbackPRINT : System.Web.UI.Page
+{
+    CommonPerception MySql = new CommonPerception();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //Session["CentreCode"] = "TC_GUR_GIT";
+        if (!IsPostBack)
+        {
+            MultiView1.ActiveViewIndex = 0;
+            FillData(Session["CentreCode"].ToString());
+        }   
+    }
+
+    #region Fill TestSchedule
+
+    void FillData(string CentreCode)
+    {
+        if (CentreCode != "")
+        {
+            DataSet Dsdata = MySql.GetDataSetWithQuery("Select top 1 * from dbo.Tb_CentreFeedback order by cdate desc");
+            if (Dsdata.Tables[0].Rows.Count > 0)
+            {
+                string Visitdate = Dsdata.Tables[0].Rows[0]["DateofVisit"].ToString();
+                string Vdate= Convert.ToDateTime(Visitdate).ToString("dd-MMM-yyyy");
+                ddlitem41.Text = Vdate.ToString();
+                ddlitem42.Text = Dsdata.Tables[0].Rows[0]["TimeofVisit"].ToString();
+                ddlitem43.Text = Dsdata.Tables[0].Rows[0]["Centre"].ToString();
+                ddlitem44.Text = Dsdata.Tables[0].Rows[0]["CentreSp"].ToString();
+                ddlitem45.Text = Dsdata.Tables[0].Rows[0]["AptechSp"].ToString();
+                ddlitem46.Text = Dsdata.Tables[0].Rows[0]["AICTESP"].ToString();
+
+                c1.Text = Dsdata.Tables[0].Rows[0]["Testcount1"].ToString();
+                c11.Text = Dsdata.Tables[0].Rows[0]["Testcount2"].ToString();
+                c12.Text = Dsdata.Tables[0].Rows[0]["Testcount3"].ToString();
+                c13.Text = Dsdata.Tables[0].Rows[0]["Testcount4"].ToString();
+                c14.Text = Dsdata.Tables[0].Rows[0]["Testcount5"].ToString();
+                c15.Text = Dsdata.Tables[0].Rows[0]["Testcount6"].ToString();
+                c16.Text = Dsdata.Tables[0].Rows[0]["Testcount7"].ToString();
+                c17.Text = Dsdata.Tables[0].Rows[0]["Testcount8"].ToString();
+                c18.Text = Dsdata.Tables[0].Rows[0]["Testcount9"].ToString();
+                c19.Text = Dsdata.Tables[0].Rows[0]["Testcount10"].ToString();
+
+                r1.Text = Dsdata.Tables[0].Rows[0]["RoomCount1"].ToString();
+                r11.Text = Dsdata.Tables[0].Rows[0]["RoomCount2"].ToString();
+                r12.Text = Dsdata.Tables[0].Rows[0]["RoomCount3"].ToString();
+                r13.Text = Dsdata.Tables[0].Rows[0]["RoomCount4"].ToString();
+                r14.Text = Dsdata.Tables[0].Rows[0]["RoomCount5"].ToString();
+                r15.Text = Dsdata.Tables[0].Rows[0]["RoomCount6"].ToString();
+                r16.Text = Dsdata.Tables[0].Rows[0]["RoomCount7"].ToString();
+                r17.Text = Dsdata.Tables[0].Rows[0]["RoomCount8"].ToString();
+                r18.Text = Dsdata.Tables[0].Rows[0]["RoomCount9"].ToString();
+                r19.Text = Dsdata.Tables[0].Rows[0]["RoomCount10"].ToString();
+
+                ddlitem1.Text = Dsdata.Tables[0].Rows[0]["item1"].ToString();
+                ddlitem2.Text = Dsdata.Tables[0].Rows[0]["item2"].ToString();
+                ddlitem3.Text = Dsdata.Tables[0].Rows[0]["item3"].ToString();
+                ddlitem4.Text = Dsdata.Tables[0].Rows[0]["item4"].ToString();
+                ddlitem5.Text = Dsdata.Tables[0].Rows[0]["item5"].ToString();
+                ddlitem6.Text = Dsdata.Tables[0].Rows[0]["item6"].ToString();
+                ddlitem7.Text = Dsdata.Tables[0].Rows[0]["item7"].ToString();
+                ddlitem8.Text = Dsdata.Tables[0].Rows[0]["item8"].ToString();
+                ddlitem9.Text = Dsdata.Tables[0].Rows[0]["item9"].ToString();
+                ddlitem10.Text = Dsdata.Tables[0].Rows[0]["item10"].ToString();
+
+                ddlitem11.Text = Dsdata.Tables[0].Rows[0]["item11"].ToString();
+                ddlitem12.Text = Dsdata.Tables[0].Rows[0]["item12"].ToString();
+                ddlitem13.Text = Dsdata.Tables[0].Rows[0]["item13"].ToString();
+                ddlitem14.Text = Dsdata.Tables[0].Rows[0]["item14"].ToString();
+                ddlitem15.Text = Dsdata.Tables[0].Rows[0]["item15"].ToString();
+                ddlitem16.Text = Dsdata.Tables[0].Rows[0]["item16"].ToString();
+                ddlitem17.Text = Dsdata.Tables[0].Rows[0]["item17"].ToString();
+                ddlitem18.Text = Dsdata.Tables[0].Rows[0]["item18"].ToString();
+                ddlitem19.Text = Dsdata.Tables[0].Rows[0]["item19"].ToString();
+                ddlitem20.Text = Dsdata.Tables[0].Rows[0]["item20"].ToString();
+
+                ddlitem21.Text = Dsdata.Tables[0].Rows[0]["item21"].ToString();
+                ddlitem22.Text = Dsdata.Tables[0].Rows[0]["item22"].ToString();
+                ddlitem23.Text = Dsdata.Tables[0].Rows[0]["item23"].ToString();
+                ddlitem24.Text = Dsdata.Tables[0].Rows[0]["item24"].ToString();
+                ddlitem25.Text = Dsdata.Tables[0].Rows[0]["item25"].ToString();
+                ddlitem26.Text = Dsdata.Tables[0].Rows[0]["item26"].ToString();
+                ddlitem27.Text = Dsdata.Tables[0].Rows[0]["item27"].ToString();
+                ddlitem28.Text = Dsdata.Tables[0].Rows[0]["item28"].ToString();
+                ddlitem29.Text = Dsdata.Tables[0].Rows[0]["item29"].ToString();
+                ddlitem30.Text = Dsdata.Tables[0].Rows[0]["item30"].ToString();
+
+                ddlitem31.Text = Dsdata.Tables[0].Rows[0]["item31"].ToString();
+                ddlitem32.Text = Dsdata.Tables[0].Rows[0]["item32"].ToString();
+                ddlitem33.Text = Dsdata.Tables[0].Rows[0]["item33"].ToString();
+                ddlitem34.Text = Dsdata.Tables[0].Rows[0]["item34"].ToString();
+                ddlitem35.Text = Dsdata.Tables[0].Rows[0]["item35"].ToString();
+                ddlitem36.Text = Dsdata.Tables[0].Rows[0]["item36"].ToString();
+                ddlitem37.Text = Dsdata.Tables[0].Rows[0]["item37"].ToString();
+                ddlitem38.Text = Dsdata.Tables[0].Rows[0]["item38"].ToString();
+                ddlitem39.Text = Dsdata.Tables[0].Rows[0]["item39"].ToString();
+                ddlitem40.Text = Dsdata.Tables[0].Rows[0]["item40"].ToString();
+
+                txtimprovement.Text = Dsdata.Tables[0].Rows[0]["improvement"].ToString();
+                txtimprovement.ReadOnly = true;
+                
+
+            }
+        }
+
+    }
+
+    #endregion
+}

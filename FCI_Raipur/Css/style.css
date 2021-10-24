@@ -1,0 +1,87 @@
+﻿* { margin:0;}
+
+body {
+    background:#3F8B3F;
+    font-size: 13px;
+    margin:0;
+    padding:0;
+   color: #767676;
+}
+img { border:none;}
+a { text-decoration:none;}
+
+.font13{font-size:13px;}
+.dateTime{ color:#fff; line-height:32px; font-weight:bold}
+.visCount{ padding:2px 10px; text-align:center; background:#09F; margin-right:10px; border-radius:10px; color:#fff; font-weight:bold;}
+
+.highlights{ background:#e1e1e1; color:#000; }
+.list-group-item img{ float:left; padding-right:5px}
+.list-group-item h4{ font-size:13px; font-weight:bold; margin:0; padding:5px}
+.colour1{ background:#1aa6ab;}
+.txtBorder{ border-right:solid 1px #fff; min-height:245px;}
+.f-callus{ padding-top:10px;}
+.btnTest{ font-size:16px; font-weight:bold; width:160px;}
+
+
+.a, .b, .c1, .c2, .c3 {border:solid thin #CCC; margin-bottom:10px;}
+.a {display:table}
+.b {display:table-row}
+.c1, .c2, .c3 {display:table-cell; padding:2px; width:33.33%;}
+
+.knowmore{ padding:5px 0;}
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.formLabelTxt{ padding-top:5px; font-size:16px; font-size:15px;}
+
+.heading-bar  
+{
+    background:url('../Images/nav-start.jpg') repeat-x top left;    
+    color:#fff;
+    font-weight:bold;
+    font-size:15px;
+    padding-left:18px; padding-right:18px; padding-top:8px; padding-bottom:8px;
+    
+}
+.registration-cont {float:left; background-color:#ffffff; padding:0 17px 0 18px;
+ border-left:1px solid #dddddd; border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;
+    width: 790px;
+	border-top-style: none;
+	border-top-color: inherit;
+	border-top-width: medium;
+}
