@@ -13,7 +13,7 @@ jobs:
         repository: Kathayat123/Demo-Action-Project
         path: Demo-Action-Project
     - run: |
-         git config --global user.name 'Automatrix'
+         git config --global user.name 'Checkmate'
          git config --global user.email "saurabh.singh@aptech.ac.in"
          git log --oneline >> log_$(date +%T).txt
        
