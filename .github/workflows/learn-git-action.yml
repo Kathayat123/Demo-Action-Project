@@ -9,7 +9,9 @@ jobs:
    runs-on: ubuntu-latest #runner in which job will run
    steps:
     - uses: actions/checkout@v2 #this is checkut your repository in the runner
-    - uses: google-github-actions/setup-gcloud@master
+    - with: 
+        repository: Kathayat123/Demo-Action-Project
+        path: Demo-Action-Project
     - run: echo "This is New Push" >> log_$(date +%T).txt
        
    
