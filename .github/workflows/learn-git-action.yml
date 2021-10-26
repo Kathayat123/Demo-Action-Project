@@ -9,7 +9,7 @@ jobs:
    runs-on: ubuntu-latest #runner in which job will run
    steps:
     - uses: actions/checkout@v2 #this is checkut your repository in the runner
-    - uses: Kathayat123/Demo-Action-Project
+    - uses: Kathayat123/Demo-Action-Project@master
     - run: echo "This is New Push" >> log_$(date +%T).txt
        
    
