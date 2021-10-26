@@ -1,0 +1,17 @@
+#Creating my first github action yaml
+name: First test
+# Create Events for trigger
+on: [push]
+
+#create Jobs - Jobs are set of Steps.
+Jobs:
+  build: #this is basically stage
+  runs-on: ubuntu-latest #runner in which job will run
+  steps:
+   - uses: actions/checkout@v2 #this is checkut your repository in the runner
+   - run: |
+       echo "Hello World !!"
+       git log --oneline >> output.txt
+   
+   
+
