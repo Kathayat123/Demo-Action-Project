@@ -10,7 +10,7 @@ jobs:
    steps:
     - uses: actions/checkout@v2 #this is checkut your repository in the runner
       with:
-        repository: origin/master
+        repository: master
     - run: |
          git config --global user.name "Checkmate"
          git config --global user.email "saurabh.singh@aptech.ac.in"
