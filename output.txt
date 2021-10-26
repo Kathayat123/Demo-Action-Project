@@ -1,0 +1,11 @@
+86fab46 Merge https://github.com/Kathayat123/Demo-Action-Project
+57c9090 adding object.json file
+10105f6 updateyamlv0.1
+8e12477 Merge https://github.com/Kathayat123/Demo-Action-Project
+faef5fd Adding index.html
+33fa502 Delete dotnet.yml
+93e56a3 Adding yml to another directory
+0dbd8a3 Merge https://github.com/Kathayat123/Demo-Action-Project
+2aa7c5f Adding yaml file
+52c7f66 Create dotnet.yml
+1f73019 code to check for Git hub action script
