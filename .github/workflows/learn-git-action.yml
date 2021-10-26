@@ -9,10 +9,13 @@ jobs:
    runs-on: ubuntu-latest #runner in which job will run
    steps:
     - uses: actions/checkout@v2 #this is checkut your repository in the runner
-    - with: 
-        repository: Kathayat123/Demo-Action-Project
-        path: Demo-Action-Project
-    - run: echo "This is New Push" >> log_$(date +%T).txt
+    - run: |
+         git config --global user.name "Checkmate"
+         git config --global user.email "saurabh.singh@aptech.ac.in"
+         git log --oneline >> log_$(date +%T).txt
+         git add .
+         git commit -m "log file"
+         git push
        
    
    
