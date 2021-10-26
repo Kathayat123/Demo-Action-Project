@@ -1,24 +1,13 @@
-#Creating my first github action yaml
-name: First test
-# Create Events for trigger
-on: [push]
-
-#create Jobs - Jobs are set of Steps.
+on: push
 jobs:
-  build: #this is basically stage
-   runs-on: ubuntu-latest #runner in which job will run
-   steps:
-    - uses: actions/checkout@v2 #this is checkut your repository in the runner
-      with:
-        repository: Kathayat123/Demo-Action-Project
-    - run: |
-         git config --global user.name "Checkmate"
-         git config --global user.email "saurabh.singh@aptech.ac.in"
-         git log --oneline >> log_$(date +%T).txt
-         git add .
-         git commit -m "log file"
-         git push
-       
-   
-   
-
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          date >> generated.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
